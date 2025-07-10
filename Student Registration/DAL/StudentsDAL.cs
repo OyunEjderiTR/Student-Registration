@@ -22,7 +22,7 @@ namespace Student_Registration.DAL
             
             try
             {
-                string sql = "SELECT students.id as Id, students.name as Name, students.phone as Phone, admin.name as CreatedBy FROM students inner join admin on admin.id=students.createdBy";
+                string sql = "SELECT * FROM students";
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 connection.Open();
@@ -79,7 +79,7 @@ namespace Student_Registration.DAL
         {
             try
             {
-                string sql = "UPDATE student Set name=@name, phone=@phone,blood=@blood, gender=@gender, email=@email, dob=@dob, description=@description, updatedBy=@updatedBy WHERE id=@id ";
+                string sql = "UPDATE students Set name=@name, phone=@phone,blood=@blood, gender=@gender, email=@email, dob=@dob, description=@description, updatedBy=@updatedBy WHERE id=@id ";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@name", student.name);

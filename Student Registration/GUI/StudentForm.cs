@@ -48,7 +48,7 @@ namespace Student_Registration
                 studentsBLL.gender = cmbGender.Text;
                 studentsBLL.email = txtEmail.Text;
                 studentsBLL.description = txtDescription.Text;
-                studentsBLL.dob = dtDob.Text;
+                studentsBLL.dob = dtDob.Text;    
 
                 if (studentsDAL.InsertData(studentsBLL))
                 {
@@ -112,7 +112,7 @@ namespace Student_Registration
             txtId.Text = row[0].ToString();
             txtName.Text = row[1].ToString();
             txtPhone.Text = row[2].ToString();
-            cmbBlood.Text = row[3].ToString();
+            cmbBlood.Text = row[3].ToString();            
             cmbGender.Text = row[4].ToString();
             txtEmail.Text = row[5].ToString();
             dtDob.Text = row[6].ToString();
